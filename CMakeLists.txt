@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.22)
 project(halper-ui)
 
-find_package(Qt6 COMPONENTS Core Gui Widgets Network Qml)
+find_package(Qt6 COMPONENTS Core Gui Widgets Network Qml Quick QuickControls2)
 find_package(Protobuf REQUIRED)
 
 add_subdirectory(ui)

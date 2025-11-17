@@ -8,9 +8,8 @@ int main(int argc, char **argv) {
   QApplication::setOrganizationName("App");
 
   QQmlApplicationEngine engine;
-  QObject::connect(&engine, &QQmlApplicationEngine::quit, &app,
-                   &QGuiApplication::quit);
-  engine.load(QUrl(QStringLiteral("qrc:/Main.qml")));
+  QObject::connect(&engine, &QQmlApplicationEngine::quit, &app, &QGuiApplication::quit);
+  engine.loadFromModule("Main", "Main");
 
   return app.exec();
 }
